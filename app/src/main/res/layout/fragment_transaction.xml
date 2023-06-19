@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.TransactionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTransactionSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="Transactions"
+            android:textSize="24sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Transaction"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            android:layout_below="@id/tvTransactionSection" />
+
+        <LinearLayout
+            android:id="@+id/popUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:background="@drawable/pop_update"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Enter new quantity"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etNewQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/amount_border"
+                android:gravity="center"
+                android:hint="10"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUpdateSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:backgroundTint="@color/green"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/btnUpdateCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:backgroundTint="@color/red"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

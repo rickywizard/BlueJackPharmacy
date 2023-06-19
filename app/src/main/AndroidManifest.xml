@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_big"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BlueJackPharmacy"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCWvmSfQVj1tBoanyZMTAsRq4CPM99R97g" />
+        <activity
+            android:name=".view.MedicineDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.InfoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_info"
+            android:theme="@style/Theme.BlueJackPharmacy.NoActionBar" />
+        <activity
+            android:name=".view.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.OTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

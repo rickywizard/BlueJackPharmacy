@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.OTPActivity">
+
+    <TextView
+        android:id="@+id/tvOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Enter OTP sent to your phone"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="6 digits OTP Code"
+        android:inputType="number"
+        android:maxLength="6"
+        android:gravity="center"
+        android:background="@drawable/login_card"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvOTP"/>
+
+    <Button
+        android:id="@+id/btnCheckOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/etOTP"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/purple_200"
+        app:cornerRadius="10dp" />
+
+</RelativeLayout>
